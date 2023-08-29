@@ -78,7 +78,10 @@ hr {
   min-height: 100vh;
 }
 
+body {
+  background: #eaeaf0;
+}
+
 :root {
   min-height: 100vh;
-  position: relative;
 }

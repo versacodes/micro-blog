@@ -19,7 +19,4 @@
 </template>
 
 <style scoped>
-main {
-  margin-bottom: 5rem;
-}
 </style>

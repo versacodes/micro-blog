@@ -2,9 +2,6 @@
 import BaseHeading from './BaseHeading.vue'
 import MainSectionCard from './MainSectionCard.vue'
 
-function testLog() {
-  console.log('This is a test event')
-}
 
 </script>
 
@@ -15,7 +12,7 @@ function testLog() {
   		value="Articles"
   		:child-class="[ $style['box--title'], 'title' ]"
   	/>
-  	<MainSectionCard @some-event="testLog" />
+  	<MainSectionCard />
   </div>
 </template>
 

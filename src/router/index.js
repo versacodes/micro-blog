@@ -1,29 +1,13 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import HomePageView from '../pages/HomePageView.vue'
-import BlogPost from '../components/BlogPost.vue'
-import ContactSection from '../components/ContactSection.vue'
 
 const router = createRouter({
 
   history: createWebHistory(),
   routes: [
-  
-    {
-      path: '/',
-      name: 'home',
-      component: HomePageView
-    },
-    {
-      path: '/post',
-      name: 'post',
-      component: BlogPost
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: ContactSection
-    },
-  
+    { path: '/', name: 'home', component: () => import('../pages/HomePageView.vue') },
+    { path: '/post', name: 'post', component: () => import('../pages/BlogPostView.vue') },
+    { path: '/contact', name: 'contact', component: () => import('../pages/ContactView.vue') },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('../pages/NotFoundView.vue') }
   ]
 
 })

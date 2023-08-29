@@ -1,5 +1,7 @@
 <script setup>
 import BaseHeading from './BaseHeading.vue'
+import { ref } from 'vue'
+
 </script>
 
 <template>
