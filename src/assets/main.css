@@ -33,6 +33,10 @@ hr {
   width: 85%;
 }
 
+.list {
+  list-style-type: none;
+}
+
 .box {
   background: #eaeaf0;
   padding: 3.5rem 2rem;
@@ -71,4 +75,10 @@ hr {
 
 #app {
   background: #eaeaf0;
+  min-height: 100vh;
+}
+
+:root {
+  min-height: 100vh;
+  position: relative;
 }

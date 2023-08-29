@@ -3,6 +3,10 @@ import TheHeader from './components/TheHeader.vue'
 import TheLayout from './components/TheLayout.vue'
 import TheFooter from './components/TheFooter.vue'
 import HomePageView from './pages/HomePageView.vue'
+import { RouterView } from 'vue-router'
+import { ref } from 'vue'
+
+
 </script>
 
 <template>
@@ -12,7 +16,7 @@ import HomePageView from './pages/HomePageView.vue'
 			<TheHeader/>
 		</template>
 		<template #main>
-			<HomePageView/>
+			<RouterView/>
 		</template>
 		<template #footer>
 			<TheFooter/>

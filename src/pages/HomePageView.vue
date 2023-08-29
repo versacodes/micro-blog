@@ -1,4 +1,4 @@
-<script setup>
+  <script setup>
 import ContactSection from '../components/ContactSection.vue'
 import MainSection from '../components/MainSection.vue'
 </script>

@@ -1,17 +1,21 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+
 const links = ['Home', 'Posts', 'About']
+const views = ['home', 'post', 'contact']
 </script>
 
 <template>
   <nav class="nav">
     <ul class="list">
       <li class="list-item"
-      		v-for="link in links"
-      		:key="link+Math.random()"
+      	v-for="(link, idx) in links"
+      	:key="link+Math.random()"
       >
-      	<a :href="`#${link}`"
-      		 class="list-link"
-      	>{{ link }}</a>
+      	<RouterLink
+          :to="{ name: `${views[idx]}` }"
+      		class="list-link"
+      	>{{ link }}</RouterLink>
       </li>
     </ul>
   </nav>

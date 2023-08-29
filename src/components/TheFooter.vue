@@ -15,6 +15,10 @@
   background: #457;
   padding: 2rem;
   text-align: center;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .wrapper {

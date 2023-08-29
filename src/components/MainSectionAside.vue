@@ -11,7 +11,7 @@ import BaseHeading from './BaseHeading.vue'
         :type="2"
         :child-class="$style.title"
       />
-      <ul :class="$style.list">
+      <ul class="list">
         <li :class="$style['list-item']">Post 1</li>
         <li :class="$style['list-item']">Post 2</li>
         <li :class="$style['list-item']">Post 3</li>
@@ -28,14 +28,6 @@ import BaseHeading from './BaseHeading.vue'
 .title {
 	font-size: 1.8rem;
 	margin-bottom: 1.8rem;
-}
-
-.list {
-  list-style-type: none;
-}
-
-.list-item {
-  font-size: 1rem;
 }
 
 .list-item ~ .list-item {

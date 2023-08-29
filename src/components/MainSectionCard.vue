@@ -1,8 +1,14 @@
 <script setup>
+defineEmits(['someEvent'])
 </script>
 
 <template>
-	<div class="card" v-for="n in 3" :key="n+Math.random()">
+	<div
+    class="card"
+    v-for="n in 3"
+    :key="n+Math.random()"
+    @click="$emit('someEvent')"
+  >
 		<h3 class="title card--title">Card Title</h3>
 		<p class="content">Cras vel elit sed mi placerat pharetra eget vel odio. Cras vel elit sed mi placerat pharetra eget vel odio...</p>
 	</div>
@@ -18,7 +24,6 @@
 .card {
   background: #abd;
   padding: 2rem;
-  /* margin-top: 5px; */
 }
 
 .card ~ .card {
@@ -26,7 +31,7 @@
 }
 
 .card--title {
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	margin-bottom: 1rem;
 }
 

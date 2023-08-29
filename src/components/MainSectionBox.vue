@@ -1,24 +1,25 @@
 <script setup>
 import BaseHeading from './BaseHeading.vue'
 import MainSectionCard from './MainSectionCard.vue'
+
+function testLog() {
+  console.log('This is a test event')
+}
+
 </script>
 
 <template>
 	<div :class="[ $style.box, 'box' ]">
   	<BaseHeading
   		:type="1"
-  		value="Articles"	
+  		value="Articles"
   		:child-class="[ $style['box--title'], 'title' ]"
   	/>
-  	<MainSectionCard/>
+  	<MainSectionCard @some-event="testLog" />
   </div>
 </template>
 
 <style module>
-.box {
-  padding: 3.5rem 2rem;
-}
-
 .box--title {
   text-align: center;
 }

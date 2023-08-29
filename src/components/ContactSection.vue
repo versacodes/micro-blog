@@ -12,9 +12,11 @@ import BaseInput from './BaseInput.vue'
         :type="2"
         :child-class="[$style.title, 'title']"
       />
+      
       <p
         :class="[$style.content, 'content']"
       >Pellentesque habitant morbi tristique senectus et netus. Etiam risus sapien, auctor eu volutpat sit amet, porta in nunc.</p>
+      
       <form
         :class="$style.form"
         method="post"
@@ -22,7 +24,7 @@ import BaseInput from './BaseInput.vue'
       >
       	<BaseInput
           type="text"
-          name="email"
+          name-input="email"
           place-holder="Enter your email address"
           :class-input="$style.input"
         />

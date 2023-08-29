@@ -1,13 +1,14 @@
 <script setup>
 import MainSectionBox from './MainSectionBox.vue'
 import MainSectionAside from './MainSectionAside.vue'
+
 </script>
 
 <template>
 	<main class="main">
 		<div class="wrapper">
-	  	<MainSectionBox/>
-	  	<MainSectionAside/>
+	  	<MainSectionBox />
+	  	<MainSectionAside />
 	  </div>
  	</main>
   <hr>
