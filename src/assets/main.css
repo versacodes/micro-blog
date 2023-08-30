@@ -55,9 +55,9 @@ hr {
   color: #333;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .title {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 }
 

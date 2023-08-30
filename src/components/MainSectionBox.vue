@@ -21,9 +21,9 @@ import MainSectionCard from './MainSectionCard.vue'
   text-align: center;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
 	.box--title {
-		font-size: 2.8rem;
+		font-size: 1.8rem;
 	}
 }
 </style>

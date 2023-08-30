@@ -23,7 +23,7 @@ import MainSectionAside from './MainSectionAside.vue'
   max-width: 800px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   .wrapper {
     flex-direction: column;
   }

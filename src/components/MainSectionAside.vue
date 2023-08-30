@@ -35,7 +35,7 @@ import BaseHeading from './BaseHeading.vue'
   margin-top: 1rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .aside-hr {
     display: none;
   }
@@ -43,7 +43,7 @@ import BaseHeading from './BaseHeading.vue'
     border-left: 1px dashed #777;
   }
   .title {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 }
 </style>
