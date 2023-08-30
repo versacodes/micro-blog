@@ -77,10 +77,10 @@ import BaseInput from './BaseInput.vue'
   font-weight: bold;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .input, .button {
-    font-size: 1.2rem;
-    padding: 1.2rem;
+    font-size: 1rem;
+    padding: 1rem;
   }
   .input {
     width: 80%;

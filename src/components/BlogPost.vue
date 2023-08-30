@@ -58,7 +58,6 @@ import { ref } from 'vue'
   margin-top: 1.8rem;
   flex-wrap: wrap;
   width: 50%;
-  /* background: #ff8; */
   align-items: center;
 }
 
