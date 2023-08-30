@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import {createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
 
@@ -9,7 +9,11 @@ const router = createRouter({
     { path: '/post/:id', name: 'postId', component: () => import('../pages/BlogPostView.vue') },
     { path: '/contact', name: 'contact', component: () => import('../pages/ContactView.vue') },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('../pages/NotFoundView.vue') }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 40 }
+  }
 
 })
 
