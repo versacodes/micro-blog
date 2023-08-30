@@ -11,7 +11,6 @@ import MainSectionAside from './MainSectionAside.vue'
 	  	<MainSectionAside />
 	  </div>
  	</main>
-  <hr>
 </template>
 
 <style scoped>

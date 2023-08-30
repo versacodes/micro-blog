@@ -23,6 +23,7 @@ import BaseHeading from './BaseHeading.vue'
 <style module>
 .aside {
   text-align: center;
+  width: 40%;
 }
 
 .title {
