@@ -49,6 +49,10 @@ hr {
 	margin: 0 auto;
 }
 
+.dets {
+  font-size: 2rem;
+}
+
 .title {
   font-size: 1.8rem;
   margin-bottom: 1.8rem;

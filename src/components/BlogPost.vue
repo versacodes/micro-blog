@@ -1,74 +1,72 @@
 <script setup>
 import BaseHeading from './BaseHeading.vue'
-import { ref } from 'vue'
+import { inject } from 'vue'
+
+const posts = inject('posts')
 
 </script>
 
 <template>
-  <section :class="[ 'box', $style['box--post'] ]">
-    <div :class="[ 'wrapper', $style['wrapper--post'] ]">
-      <BaseHeading
-        value="Start Of New Beginning"
-        :type="1"
-        child-class="title"
-      />
-      
-      <div :class="[ $style['box--details'] ]">
-        <p class="content">Author</p>
-        <p class="content">Date</p>
-      </div>
-
-      <p class="content">Aenean ullamcorper orci et vulputate fermentum. Cras erat dui, finibus vel lectus ac, pharetra dictum odio. Nullam tempus scelerisque purus, sed mattis elit condimentum nec. Cras vel elit sed mi placerat pharetra eget vel odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tempus scelerisque purus, sed mattis elit condimentum nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ac nulla varius diam ultrices rutrum.</p>
-      
-      <ul :class="[$style.list, 'list']">
-        <span :class="$style.tag">Tags:</span>
-      	<li :class="$style['list-item']">javascript</li>
-      	<li :class="$style['list-item']">frontend</li>
-      	<li :class="$style['list-item']">vue</li>
-      </ul>
+  <div :class="[ 'box' ]">
+    <BaseHeading
+      :value="posts[$route.params.id].title"
+      :type="1"
+      child-class="title"
+    />
+    
+    <div :class="[ $style['box--details'] ]">
+      <p :class="[ $style['content--details'], 'content' ]"><strong>Created by</strong>: {{ posts[$route.params.id].author }}</p>
+      <p :class="[ $style['content--details'], 'content' ]"><strong>Posted on</strong>: {{ posts[$route.params.id].date }}</p>
     </div>
-  </section>
+
+    <p class="content">{{ posts[$route.params.id].content }}</p>
+    
+    <ul :class="[ $style.list, 'list' ]">
+      <span :class="[ $style.tag ]"><strong>Tags</strong>:</span>
+      <li
+        :class="[ $style['list--item'] ]"
+        v-for="tag in posts[$route.params.id].tags"
+      >{{ tag }}</li>
+    </ul>
+  </div>
 </template>
 
 <style module>
-.box--post {
-  display: block;
-}
-
 .box--details {
   display: flex;
-  width: 50%;
-  /* background: #fff; */
   justify-content: space-between;
+  max-width: 32rem;
   margin-bottom: 1.4rem;
 }
 
-.wrapper--post {
-  display: block;
-}
-
-.tag {
-  padding: 10px;
-  display: inline-block;
-  font-weight: bold;
+.content--details {
+  font-size: 0.8rem;
 }
 
 .list {
   display: flex;
-  margin-top: 1.8rem;
   flex-wrap: wrap;
-  width: 50%;
+  width: 40%;
   align-items: center;
+  margin-top: 1.8rem;
+  color: #444;
+  row-gap: 6px;
 }
 
-.list-item {
-  background: #fff;
-  padding: 10px 15px;
-  border-radius: 40px;
+.tag {
+  margin-right: 10px;
   font-size: 0.8rem;
 }
 
-.list-item ~ .list-item {
-  margin-left: 1rem;
+.list--item {
+  border: 1px solid #444;
+  padding: 0.3rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
 }
+
+.list--item ~ .list--item {
+  margin-left: 8px;
+}
+
 </style>

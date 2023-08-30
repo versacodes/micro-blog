@@ -5,16 +5,14 @@ import { useRouter, useRoute } from 'vue-router'
 const router = useRouter()
 
 const posts = inject('posts')
-
-defineEmits(['someEvent'])
 </script>
 
 <template>
 	<div
     class="card"
-    v-for="post in posts"
+    v-for="(post, index) in posts"
     :key="post.id+Math.random()"
-    @click="router.push({name: 'post'})"
+    @click="router.push({name: 'postId', params: {id: index}})"
   >
 		<h3 class="title card--title">{{ post.title }}</h3>
 		<p class="content">{{ post.content }}</p>

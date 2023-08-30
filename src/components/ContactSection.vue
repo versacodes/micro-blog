@@ -31,6 +31,7 @@ import BaseInput from './BaseInput.vue'
       	<BaseButton
           :class-button="$style.button"
           value="Submit"
+          @submit.prevent
         />
       </form>
    </div>
